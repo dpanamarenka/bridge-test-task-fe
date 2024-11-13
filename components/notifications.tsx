@@ -45,15 +45,12 @@ export const Notifications = () => {
     const newSocket = io("http://localhost:4000");
 
     newSocket.on(Event.BRIDGE_EVENT, (message) => {
-      console.log(message);
       setMessages((prev) => [...prev, message]);
     });
     newSocket.on(Event.SUCCESS_EVENT, (message) => {
-      console.log(message);
       setMessages((prev) => [...prev, message]);
     });
     newSocket.on(Event.ERROR_EVENT, (message) => {
-      console.log(message);
       setMessages((prev) => [...prev, message]);
     });
 

@@ -12,7 +12,6 @@ export default function Bridge() {
   const { sendTransactionAsync } = useSendTransaction();
 
   const onSubmit = async () => {
-    console.log(111);
     try {
       await sendTransactionAsync({
         to: SEPOLIA_BRIDGE_ADDRESS,
